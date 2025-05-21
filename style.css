@@ -1,0 +1,62 @@
+:root {
+    --font: "Poiret One", sans-serif;
+    --colorfondo: #0e1f19;
+    --colorfuenteN: #e19167;
+    --colorfuenteV: #45d2ab;
+}
+
+body {
+    background-color: var(--colorfondo);
+    font-family: var(--font);
+    color: var(--colorfuenteV);
+}
+
+section {
+    width: min(100%, 900px);
+    margin: 0 auto;
+}
+
+
+h2 {
+    color: var(--colorfuenteN);
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+p, a {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    p, a {
+        font-size: 1.1rem;
+    }
+}
+
+/* PANTALLAS GRANDES */
+@media (min-width: 1024px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h5 {
+        font-size: 2rem;
+    }
+
+    p, a {
+        font-size: 1.2rem;
+    }
+}
