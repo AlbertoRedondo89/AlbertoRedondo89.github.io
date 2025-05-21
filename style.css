@@ -2,7 +2,7 @@
     --font: "Poiret One", sans-serif;
     --colorfondo: #0e1f19;
     --colorfuenteN: #e19167;
-    --colorfuenteV: #45d2ab;
+    --colorfuenteV: #fff;
 }
 
 body {
@@ -11,52 +11,97 @@ body {
     color: var(--colorfuenteV);
 }
 
+a {
+    text-decoration: none;
+    color: #45d2ab;
+}
+
 section {
-    width: min(100%, 900px);
-    margin: 0 auto;
+    width: min(100%, 700px);
+    margin: 50px auto 100px auto;
+}
+#intro {
+    display: grid;
+    grid-template-columns: minmax(120px, 25%) 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+#intro div:nth-of-type(2) * {
+    margin-top: 10px;
+}
+.marco {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.marco img {
+    object-fit: cover;
+    height: 100%;
+}
+
+#content article {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#content article div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "fecha titulo"
+        "empty texto";
+    justify-items: start;
+    align-items: start;
+    margin-top: 20px;
+}
+#content article div * {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#content article div p:nth-of-type(1) {
+    grid-area: fecha;
+}
+#content article div h5 {
+    grid-area: titulo;
+}
+#content article div p:nth-of-type(2) {
+    grid-area: texto;
 }
 
 
 h2 {
     color: var(--colorfuenteN);
-    font-size: 1.5rem;
-}
-
+    font-size: 1.5rem;}
 h5 {
-    font-size: 1.2rem;
-}
-
+    font-size: 1.2rem;}
 p, a {
     font-size: 1rem;
-    line-height: 1.6;
-}
-
+    line-height: 1.6;}
 
 @media (min-width: 768px) {
     h2 {
-        font-size: 2rem;
-    }
+        font-size: 2rem;}
 
     h5 {
-        font-size: 1.5rem;
-    }
+        font-size: 1.5rem;}
 
     p, a {
-        font-size: 1.1rem;
-    }
+        font-size: 1.3rem;}
 }
 
 /* PANTALLAS GRANDES */
 @media (min-width: 1024px) {
     h2 {
-        font-size: 2.5rem;
-    }
+        font-size: 2.2rem;}
 
     h5 {
-        font-size: 2rem;
-    }
+        font-size: 1.7rem;}
 
     p, a {
-        font-size: 1.2rem;
-    }
+        font-size: 1.4rem;}
 }
